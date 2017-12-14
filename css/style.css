@@ -1,0 +1,52 @@
+body {
+    background: #4f4f4f;
+    color: aliceblue;
+    font-family: sans-serif;
+}
+
+.clockWithHands {
+    width: 12em;
+    height: 12em;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin: 0px auto;
+    position: relative;
+    padding: 2rem;
+}
+
+.clockHand {
+    top: 50%;
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    transform-origin: 100%;
+    /*Normaly 50%. 100% menas you rotate form the right site of element*/
+    transition: all 0.4s;
+    transition-timing-function: cubic-bezier(0.12, 1.78, 0.58, 1);
+    transform: rotate(90deg);
+}
+
+.clockFace {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+
+}
+
+.sek {
+    background: #821821;
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    background: black;
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-40%);
+    border-radius: 50%;
+
+}
