@@ -1,10 +1,26 @@
+html, body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
 body {
-    background: #4f4f4f;
-    color: aliceblue;
+	display: flex;
+	flex-direction: column;
+    background: #667db6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #f0f8ff;
     font-family: sans-serif;
 }
-
+main{
+	margin: 0 auto;
+	flex: 1 0 auto; /*flex-grow, flex-shrink, flex-basis*/
+}
 .clockWithHands {
+	background-color: #e7c305;
+	background: -webkit-linear-gradient(to right, #c4b25c, #fffc00);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #c4b25c, #fffc00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     width: 12em;
     height: 12em;
     border: 20px solid white;
@@ -18,7 +34,6 @@ body {
     top: 50%;
     width: 50%;
     height: 6px;
-    background: black;
     position: absolute;
     transform-origin: 100%;
     /*Normaly 50%. 100% menas you rotate form the right site of element*/
@@ -33,6 +48,10 @@ body {
     height: 100%;
     transform: translateY(-3px);
 
+}
+.min,
+.hour{
+	background: #000;
 }
 
 .sek {
@@ -49,4 +68,17 @@ body {
     transform: translateY(-40%);
     border-radius: 50%;
 
+}
+footer{
+	background-color: #000;
+	padding: 20px 0;
+	text-align: center;	
+}
+footer a {
+    text-decoration: none;
+    color: #e7c305;
+	transition: 0.4s all;
+}
+footer a:hover {
+    color: #821821;
 }

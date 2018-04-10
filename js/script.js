@@ -55,6 +55,17 @@ function clock() {
     let h = today.getHours();
     let hDeg = ((h / 12) * 360) + 90;
 
+    // fix bug with spinback hands between 59-0s
+    if (s == 0) {
+        secoundsHand.style.transitionDuration = '0s';
+        minutesHand.style.transitionDuration = '0s';
+        hourHand.style.transitionDuration = '0s';
+    } else {
+        secoundsHand.style.transitionDuration = '0.04s';
+        minutesHand.style.transitionDuration = '0.04s';
+        hourHand.style.transitionDuration = '0.04s';
+    }
+
     //make clock's hands move (Problem beetwen 59s - 0s)
     secoundsHand.style.transform = `rotate(${sDeg}deg)`;
     minutesHand.style.transform = `rotate(${mDeg}deg)`;
